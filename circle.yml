@@ -25,6 +25,15 @@ checkout:
     - git submodule sync
     - git submodule update --init # use submodules
     
+dependencies:
+  override:
+    - bundle install:
+        timeout: 600
+        environment:
+          foo: bar
+          foo2: bar2
+        pwd:
+          test_dir
     
 test:
  post:
