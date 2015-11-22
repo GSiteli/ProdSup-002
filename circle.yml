@@ -24,13 +24,7 @@ checkout:
   post:
     - git submodule sync
     - git submodule update --init # use submodules
-
-## Customize dependencies
-dependencies:
-  override:
-    - bundle install: # note ':' here
-        timeout: 180 # fail if command has no output for 3 minutes
-
+    
 ## Customize database setup
 database:
   override:
